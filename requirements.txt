@@ -1,2 +1,6 @@
+HTSeq
+synapseclient
+pandas
+pysftp
 Flask
 Redis
