@@ -29,11 +29,11 @@ RUN python get-pip.py
 # Install any needed packages specified in requirements.txt
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
-# Make port 80 available to the world outside this container
-EXPOSE 80
+## Make port 80 available to the world outside this container
+#EXPOSE 80
 
-# Define environment variable
-ENV NAME World
+## Define environment variable
+#ENV NAME World
 
 # Run down_sample_re_count.py when the container launches
-CMD ["python", "down_sample_re_count.py","syn8569985","syn11587199"]
+#CMD ["python", "down_sample_re_count.py","syn8569985","syn11587199"]
