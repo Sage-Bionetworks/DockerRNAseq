@@ -19,6 +19,10 @@ RUN make install
 
 WORKDIR /app
 
+RUN wget ftp://ftp.sanger.ac.uk/pub/gencode/Gencode_human/release_24/gencode.v24.primary_assembly.annotation.gtf.gz
+RUN gunzip gencode.v24.primary_assembly.annotation.gtf.gz
+RUN ls
+
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
 
@@ -31,5 +35,5 @@ EXPOSE 80
 # Define environment variable
 ENV NAME World
 
-# Run app.py when the container launches
-CMD ["python", "app.py"]
+# Run down_sample_re_count.py when the container launches
+CMD ["python", "down_sample_re_count.py","syn8569985","syn11587199"]
