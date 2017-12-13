@@ -1,0 +1,4 @@
+HTSeq
+synapseclient
+pandas
+pysftp
